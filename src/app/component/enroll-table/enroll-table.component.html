@@ -1,0 +1,38 @@
+<div class="container">
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">S/No.</th>
+        <th scope="col">First Name</th>
+        <th scope="col">Last Lane</th>
+        <th scope="col">Address</th>
+        <th scope="col">Email</th>
+        <th scope="col">Gender</th>
+        <th scope="col">First Time?</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+  
+      <tr *ngFor="let enr of enroll">
+        <th scope="row">{{enr.id}}</th>
+        <td scope="row">{{enr.fname}}</td>
+        <td scope="row">{{enr.lname}}</td>
+        <td scope="row">{{enr.address}}</td>
+        <td scope="row">{{enr.email}}</td>
+        <td scope="row">{{enr.gender}}</td>
+        <td scope="row">{{enr.time}}</td>
+        <td>
+          <button  (click) ="enrollDetails(enr.id)" type="button" class="btn btn-success">View</button>
+          <button (click)="deleteEnroll(enr.id)"  type="button" class="btn btn-danger">Delete</button>
+        </td>
+      </tr>
+     
+    </tbody>
+  </table>
+<div>
+
+</div>
+
+</div>
+  <router-outlet></router-outlet>
